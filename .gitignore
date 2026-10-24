@@ -1,0 +1,25 @@
+# Ambiente e Chaves
+.env
+.env.local
+
+# Dependências
+node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Builds e Distribuição
+frontend/dist/
+dist/
+build/
+
+# Bancos analíticos gerados e caches
+data/processed/*.duckdb
+data/processed/*.duckdb.wal
+scratch/
+
+# IDE e Sistema
+.vscode/
+.idea/
+*.log

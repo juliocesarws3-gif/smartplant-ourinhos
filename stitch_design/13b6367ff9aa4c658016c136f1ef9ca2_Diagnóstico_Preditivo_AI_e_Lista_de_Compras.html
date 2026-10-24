@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-primary-container":"#fdfcff","primary-container":"#007bb9","text-secondary":"#475569","surface-variant":"#dfe3e8","surface-dim":"#d7dae0","secondary":"#565e74","on-error-container":"#93000a","tertiary-container":"#ac6200","outline":"#707881","status-critical":"#DC2626","on-secondary-fixed-variant":"#3f465c","surface-tint":"#006398","tertiary":"#894d00","on-primary-fixed":"#001d31","error-container":"#ffdad6","tertiary-fixed-dim":"#ffb875","on-tertiary-fixed-variant":"#6b3b00","on-primary":"#ffffff","surface-container-high":"#e5e8ee","primary-fixed":"#cce5ff","surface-container-low":"#f1f4fa","on-surface-variant":"#3f4850","primary-fixed-dim":"#93ccff","status-alert":"#D97706","text-muted":"#64748B","surface":"#f7f9ff","surface-container-highest":"#dfe3e8","secondary-fixed-dim":"#bec6e0","secondary-container":"#dae2fd","primary":"#006194","surface-canvas":"#F8FAFC","error":"#ba1a1a","on-secondary-container":"#5c647a","inverse-on-surface":"#eef1f7","on-background":"#181c20","on-secondary-fixed":"#131b2e","on-surface":"#181c20","on-secondary":"#ffffff","on-tertiary-fixed":"#2d1600","border-muted":"#CBD5E1","tertiary-fixed":"#ffdcc0","surface-container":"#ebeef4","outline-variant":"#bfc7d2","secondary-fixed":"#dae2fd","border-subtle":"#E2E8F0","on-error":"#ffffff","surface-card":"#FFFFFF","inverse-surface":"#2d3135","on-tertiary-container":"#fffbff","background":"#f7f9ff","status-normal":"#059669","on-primary-fixed-variant":"#004b73","on-tertiary":"#ffffff","surface-bright":"#f7f9ff","text-primary":"#0F172A","inverse-primary":"#93ccff","surface-container-lowest":"#ffffff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"1rem","space-xs":"0.25rem","space-md":"1rem","space-lg":"1.5rem","margin-lg":"2rem","gutter":"1rem","space-sm":"0.5rem","gutter-lg":"1.5rem","space-xl":"2rem","margin-md":"1.5rem"},"fontFamily":{"headline-lg-mobile":["Inter"],"label-xs":["Inter"],"body-lg":["JetBrains Mono"],"headline-sm":["Inter"],"headline-lg":["Inter"],"metric-display-mobile":["JetBrains Mono"],"label-md":["Inter"],"headline-md":["Inter"],"metric-display":["JetBrains Mono"],"body-md":["JetBrains Mono"],"body-sm":["JetBrains Mono"],"metric-sm":["JetBrains Mono"]},"fontSize":{"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"700"}],"label-xs":["10px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"700"}],"metric-display-mobile":["28px",{"lineHeight":"34px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"metric-display":["36px",{"lineHeight":"40px","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"metric-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}]}}}};</script></head><body class="bg-surface-canvas font-body-md text-text-primary min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-card z-50 flex flex-col justify-between py-space-md border-r border-border-subtle shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-md"><div class="px-space-md flex flex-col gap-space-xs"><span class="font-label-xs text-text-muted uppercase tracking-wider">Unidade Operacional</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">precision_manufacturing</span><span class="font-headline-sm text-text-primary text-[15px]">Plant Control v4.2</span></div></div><div class="px-space-md"><label class="font-label-xs text-text-muted uppercase tracking-wider block mb-space-xs">Ativo Selecionado</label><div class="relative"><select class="w-full h-10 px-space-sm bg-surface-container-low font-body-sm text-text-primary rounded-lg border border-border-muted focus:outline-none focus:border-primary pr-8 appearance-none cursor-pointer"><option selected="">Torno CNC-04</option><option>Bomba Centrífuga P-102</option><option>Esteira M-01</option></select><span class="material-symbols-outlined absolute right-space-sm top-2.5 text-text-muted pointer-events-none text-[18px]">expand_more</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="painel-geral-telemetria" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span>Painel &amp; Telemetria</a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg transition-all bg-primary-container text-on-primary-container font-headline-sm" data-path="diagnostico-preditivo-ai" href="#"><span class="material-symbols-outlined text-[18px]">psychology</span>Diagnóstico AI</a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="cotacao-de-pecas" href="#"><span class="material-symbols-outlined text-[18px]">request_quote</span>Cotação de Peças</a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ordens-de-servico" href="#"><span class="material-symbols-outlined text-[18px]">assignment</span>Ordens de Serviço</a></nav></div><div class="px-space-md border-t border-border-subtle pt-space-sm flex flex-col gap-space-xs"><div class="flex items-center justify-between text-text-muted font-body-sm"><span>Shift ID</span><span class="font-label-md text-text-primary">T-01A (Manhã)</span></div><div class="flex items-center justify-between text-text-muted font-body-sm"><span>Uptime Linha</span><span class="font-label-md text-status-normal">99.4%</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 z-40 bg-surface-card/95 backdrop-blur-xl border-b border-border-subtle shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="SmartPlant Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W5BNF_cV1Zb_Jsv5dzo1B_FyelVhDDLZb6DymoLVPRlIqYtgtPqnmfxaPTpm3jhscxg4k-LdGeEO2Hud1lhNg6Ksk7tp9YhTYNdZtMSs17Ol4yHVYSEnNbkrNtUzMzcmx3UVn-_oibjWvk3oKPPdH9OG3h45vQ0sHPgOFPqQCWVHsZk9QNKtq5StLj_zmPayt-O_fg6fFNEFUO7iraFQwu7IhCzP61WrUE1KFPJHH3JY8WPl10NduH_AcD"/><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-text-primary tracking-tight">SmartPlant Ourinhos</span><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-text-secondary border border-border-muted font-label-xs">Linha 02 - Moagem &amp; Envase</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="px-space-sm py-space-xs rounded-lg font-headline-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="painel-geral-telemetria" href="#">Painel Geral &amp; Telemetria</a><a aria-current="page" class="px-space-sm py-space-xs rounded-lg transition-colors bg-primary-container text-on-primary-container font-headline-sm" data-path="diagnostico-preditivo-ai" href="#">Diagnóstico Preditivo AI</a><a class="px-space-sm py-space-xs rounded-lg font-headline-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="cotacao-de-pecas" href="#">Cotação de Peças</a><a class="px-space-sm py-space-xs rounded-lg font-headline-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ordens-de-servico" href="#">Ordens de Serviço (OS)</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm bg-surface-container-low px-space-sm py-1.5 rounded-lg border border-border-subtle"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-status-normal animate-pulse"></span><span class="font-label-xs text-text-secondary uppercase">IIoT Firebase</span></div><span class="text-border-muted">|</span><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-status-normal"></span><span class="font-label-xs text-text-secondary uppercase">DuckDB OLAP</span></div></div><div class="hidden sm:flex items-center gap-1.5 text-text-secondary bg-surface-container-low px-space-sm py-1.5 rounded-lg border border-border-subtle"><span class="material-symbols-outlined text-[16px] text-text-muted">schedule</span><span class="font-body-sm text-text-primary">07:42:19</span><span class="font-label-xs text-text-muted uppercase">Turno 1</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface-canvas min-h-screen"><div class="flex flex-col w-full p-space-md lg:p-space-xl gap-space-lg">
+<!-- Top Bar: Asset Status & Engine Header -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md bg-surface-card p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center gap-space-md">
+<div class="w-14 h-14 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">psychology</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="font-label-xs bg-primary-container text-on-primary-container px-2 py-0.5 rounded-full uppercase tracking-wider">
+            Gemini 3.8 Flash High • PdM Reasoning Engine
+          </span>
+<span class="font-label-xs bg-surface-container text-text-secondary px-2 py-0.5 rounded-full uppercase tracking-wider">
+            ISO 15243 Spalling Pattern
+          </span>
+<span class="font-label-xs bg-error-container text-on-error-container px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
+            Alerta Crítico: 48h Risco Térmico
+          </span>
+</div>
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-text-primary">Bomba Centrífuga P-102</h2>
+<span class="text-text-muted font-body-sm">(Setor Moagem • Linha 02)</span>
+</div>
+</div>
+</div>
+<!-- Metadata Pill Grid -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="bg-surface-container-low px-space-md py-space-sm rounded-lg flex flex-col">
+<span class="font-label-xs text-text-muted uppercase tracking-wider">Base Analítica</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-status-normal"></span>
+<span class="font-body-sm text-text-primary">DuckDB (1.200 amostras)</span>
+</div>
+</div>
+<div class="bg-surface-container-low px-space-md py-space-sm rounded-lg flex flex-col">
+<span class="font-label-xs text-text-muted uppercase tracking-wider">Referência RAG</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">menu_book</span>
+<span class="font-body-sm text-text-primary">SENAI Hackathon Dict</span>
+</div>
+</div>
+<div class="bg-surface-container-low px-space-md py-space-sm rounded-lg flex flex-col">
+<span class="font-label-xs text-text-muted uppercase tracking-wider">Grau de Confiança</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-metric-sm text-primary">96.4%</span>
+<span class="font-label-xs text-status-normal bg-surface-container px-1 py-0.5 rounded">High Conf</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Analytics Grid: 12 Cols -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Left 7 Cols: Telemetry Snapshot, AI Findings & Protocol Checklist -->
+<div class="xl:col-span-7 flex flex-col gap-space-lg">
+<!-- Telemetry Spark & Health Snapshot -->
+<div class="bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">troubleshoot</span>
+<span class="font-headline-sm text-text-primary">Sumário de Telemetria Anômala</span>
+</div>
+<span class="font-label-xs text-text-muted uppercase">Coleta contínua: 100 Hz</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col">
+<span class="font-label-xs text-text-muted uppercase">Vibração RMS (Eixo X)</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-metric-display text-status-critical">6.84</span>
+<span class="font-label-md text-text-muted">mm/s</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-status-critical font-label-xs">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+182% ref. baseline ISO</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col">
+<span class="font-label-xs text-text-muted uppercase">Temp. Mancal Anterior</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-metric-display text-status-alert">84.2</span>
+<span class="font-label-md text-text-muted">°C</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-status-alert font-label-xs">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>Gradiente +1.8°C/hora</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col">
+<span class="font-label-xs text-text-muted uppercase">Kurtosis Espectral</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-metric-display text-text-primary">5.12</span>
+<span class="font-label-md text-text-muted">η</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-status-critical font-label-xs">
+<span class="material-symbols-outlined text-[14px]">electric_bolt</span>
+<span>Impactos não lineares</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Spectral SVG Mini Chart -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs mt-space-xs">
+<div class="flex items-center justify-between text-text-muted font-label-xs uppercase">
+<span>Espectro de Frequência BPFO / BPFI (FFT Amostrada)</span>
+<span class="text-status-critical font-label-xs">Pico Anômalo @ 142.5 Hz (Harmônico 3x)</span>
+</div>
+<div class="w-full h-24 flex items-end">
+<svg class="w-full h-full text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 600 90">
+<!-- Background grid lines -->
+<line stroke="#CBD5E1" stroke-dasharray="4 4" stroke-width="0.75" x1="0" x2="600" y1="20" y2="20"></line>
+<line stroke="#CBD5E1" stroke-dasharray="4 4" stroke-width="0.75" x1="0" x2="600" y1="50" y2="50"></line>
+<line stroke="#CBD5E1" stroke-width="0.75" x1="0" x2="600" y1="80" y2="80"></line>
+<!-- Reference Normal Curve (Pale) -->
+<path d="M 0,80 Q 50,78 100,75 T 200,74 T 300,72 T 400,76 T 500,78 T 600,80" fill="none" stroke="#CBD5E1" stroke-width="1.5"></path>
+<!-- Current Anomaly Signal -->
+<path d="M 0,80 L 40,78 L 70,76 L 110,75 L 140,70 L 170,72 L 205,68 L 220,12 L 235,65 L 260,71 L 290,69 L 320,38 L 335,70 L 410,74 L 440,55 L 455,73 L 520,77 L 600,80" fill="none" stroke="#DC2626" stroke-width="2"></path>
+<!-- Highlight Area under anomaly peak -->
+<polygon fill="#DC2626" fill-opacity="0.12" points="205,68 220,12 235,65 235,80 205,80"></polygon>
+</svg>
+</div>
+<div class="flex justify-between font-label-xs text-text-muted pt-1">
+<span>0 Hz</span>
+<span>75 Hz</span>
+<span class="text-status-critical font-bold">142.5 Hz (Defeito Pista Externa)</span>
+<span>225 Hz</span>
+<span>300 Hz</span>
+</div>
+</div>
+</div>
+<!-- AI Diagnosis & Reasoning Deep Dive -->
+<div class="bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">smart_toy</span>
+<h3 class="font-headline-sm text-text-primary">Diagnóstico Preditivo IA • Gemini Reasoning</h3>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm border-l-4 border-l-primary">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-text-primary uppercase tracking-wide">Laudo Técnico Consolidado</span>
+<span class="font-label-xs bg-error-container text-on-error-container px-2 py-0.5 rounded font-bold">Spalling Detectado</span>
+</div>
+<p class="font-body-md text-text-secondary leading-relaxed">
+            Identificado <strong class="text-text-primary font-semibold">desgaste acentuado da gaiola e esferas do rolamento acoplado</strong> no acionamento redutor. Os dados de DuckDB acusam micro-impactos cíclicos coincidentes com desprendimento prematuro de material por fadiga superficial. Há <strong class="text-status-critical font-semibold">risco iminente de travamento térmico nas próximas 48 horas</strong> caso a velocidade e torque nominais permaneçam sem intervenção.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs text-text-muted font-body-sm">
+<span>• Correlação RAG: Norma ABNT NBR 8083</span>
+<span>• Incerteza do Modelo: ±3.6%</span>
+<span>• MTBF Residual: ~38h</span>
+</div>
+</div>
+<!-- AI Suggested Action Protocol Checklist -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-text-primary text-[15px]">Protocolo Sugerido IA (Ações Mitigatórias Imediatas)</span>
+<span class="font-label-xs text-primary font-bold">4 Etapas Validadas</span>
+</div>
+<div class="space-y-space-xs" id="protocol-steps">
+<!-- Step 1 -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-high transition-colors cursor-pointer">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[14px] text-text-primary">1. Reduzir carga operacional para 70%</span>
+<span class="font-label-xs bg-status-alert text-on-primary px-1.5 py-0.2 rounded font-bold">Urgente • 12h</span>
+</div>
+<span class="font-body-sm text-text-secondary">Ajustar inversor de frequência para limitar elevação de temperatura nas próximas 12 horas.</span>
+</div>
+</label>
+<!-- Step 2 -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-high transition-colors cursor-pointer">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[14px] text-text-primary">2. Lubrificação emergencial de alívio térmico</span>
+<span class="font-label-xs bg-surface-container text-text-secondary px-1.5 py-0.2 rounded">Graxa ISO VG 220</span>
+</div>
+<span class="font-body-sm text-text-secondary">Injetar 40g de graxa sintética Mobilith SHC 220 para mitigar atrito até o turno de parada.</span>
+</div>
+</label>
+<!-- Step 3 -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-high transition-colors cursor-pointer">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[14px] text-text-primary">3. Substituição programada do rolamento</span>
+<span class="font-label-xs bg-primary-fixed text-on-primary-fixed px-1.5 py-0.2 rounded font-bold">Sábado • 06:00</span>
+</div>
+<span class="font-body-sm text-text-secondary">Executar troca completa durante o próximo turno de manutenção preventiva programada.</span>
+</div>
+</label>
+<!-- Step 4 -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-high transition-colors cursor-pointer">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[14px] text-text-primary">4. Inspeção visual do acoplamento flexível</span>
+<span class="font-label-xs bg-surface-container text-text-secondary px-1.5 py-0.2 rounded">Laser Align</span>
+</div>
+<span class="font-body-sm text-text-secondary">Avaliar desgaste angular e tolerância radial do elastômero acoplador após desmontagem.</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 5 Cols: Automated Bill of Materials (BOM) & Direct Dispatch -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Physical Asset Spec Card with Visual Placement -->
+<div class="bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-text-primary">Esquema Mecânico • P-102</span>
+<span class="font-label-xs text-status-critical font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-status-critical animate-ping"></span>
+            Ponto Crítico #2
+          </span>
+</div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-90" data-alt="High precision photorealistic close-up of an industrial centrifugal pump motor bearing housing in a modern plant facility with cool neutral lighting and subtle metallic highlights reflecting clean SCADA aesthetics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5JTcCfsX3KxJxtWXii7ZwXmGNiTqc1bm2MyyWgFO-mT-7dsVu3u7W6mgpT-AXsQTy6BhLBFstP2t0bQKudpwnMVnhfYxxArQZefsWCO-2X7dfHw6LruF-dp82GBVABkkcNAoQTb23eUqmX3STRlCKP_MgGT8Z1Uz-8S75X9hqe-4e_LDNcvkWDJ3A-ARsi8OLTdx4O2sDFi7Aw_4voqAlIyyUhTy5wURc1yOC_KWENmOjP0vwM4vCGg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary">
+<div>
+<p class="font-headline-sm text-[14px]">Mancal Dianteiro • Rolamento SKF 6208</p>
+<p class="font-body-sm text-surface-container-high text-[11px]">Subconjunto: Redutor Acionador Linha 02</p>
+</div>
+<span class="font-label-xs px-2 py-1 rounded bg-status-critical/90 text-on-primary font-bold uppercase">
+              Alvo de Troca
+            </span>
+</div>
+</div>
+</div>
+<!-- Automated BOM generated by AI Reasoning Engine -->
+<div class="bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-md flex-1">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between border-b border-border-subtle pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">shopping_cart_checkout</span>
+<span class="font-headline-sm text-text-primary">Lista de Compras Otimizada</span>
+</div>
+<span class="font-label-xs text-text-muted uppercase">Gerado via Gemini AI</span>
+</div>
+<p class="font-body-sm text-text-secondary">
+            Itens deduzidos automaticamente a partir do manual técnico da <span class="font-semibold text-text-primary">Bomba P-102</span> e dados de desgaste acumulado.
+          </p>
+<!-- Component Items Table -->
+<div class="flex flex-col divide-y divide-border-subtle mt-space-xs">
+<!-- Item 1 -->
+<div class="py-space-sm flex items-start justify-between gap-space-sm hover:bg-surface-container-lowest p-1 rounded transition-colors">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">inventory_2</span>
+<div>
+<h4 class="font-headline-sm text-[13px] text-text-primary">Rolamento Rígido de Esferas SKF 6208-2RS1</h4>
+<p class="font-body-sm text-text-muted text-[11px]">Cód: <span class="text-text-primary font-semibold">SKF-6208-2RS1</span> • Folga C3</p>
+</div>
+</div>
+<div class="text-right whitespace-nowrap">
+<span class="font-metric-sm text-[14px] text-text-primary">2 un</span>
+<span class="block font-label-xs text-status-normal font-semibold">Estoque Central: 0</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="py-space-sm flex items-start justify-between gap-space-sm hover:bg-surface-container-lowest p-1 rounded transition-colors">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">adjust</span>
+<div>
+<h4 class="font-headline-sm text-[13px] text-text-primary">Retentor de Óleo Sabó 02145 BRG</h4>
+<p class="font-body-sm text-text-muted text-[11px]">Cód: <span class="text-text-primary font-semibold">SAB-02145</span> • 40x80x10 NBR</p>
+</div>
+</div>
+<div class="text-right whitespace-nowrap">
+<span class="font-metric-sm text-[14px] text-text-primary">2 un</span>
+<span class="block font-label-xs text-status-alert font-semibold">Estoque Almox: 1</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="py-space-sm flex items-start justify-between gap-space-sm hover:bg-surface-container-lowest p-1 rounded transition-colors">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">oil_barrel</span>
+<div>
+<h4 class="font-headline-sm text-[13px] text-text-primary">Graxa Sintética Mobilith SHC 220</h4>
+<p class="font-body-sm text-text-muted text-[11px]">Cód: <span class="text-text-primary font-semibold">MOB-SHC220</span> • Cartucho 400g</p>
+</div>
+</div>
+<div class="text-right whitespace-nowrap">
+<span class="font-metric-sm text-[14px] text-text-primary">1 un</span>
+<span class="block font-label-xs text-status-normal font-semibold">Disponível</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="py-space-sm flex items-start justify-between gap-space-sm hover:bg-surface-container-lowest p-1 rounded transition-colors">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">fiber_manual_record</span>
+<div>
+<h4 class="font-headline-sm text-[13px] text-text-primary">Junta de Vedação em Neoprene</h4>
+<p class="font-body-sm text-text-muted text-[11px]">Cód: <span class="text-text-primary font-semibold">JNT-NEO-P102</span> • Espessura 3mm</p>
+</div>
+</div>
+<div class="text-right whitespace-nowrap">
+<span class="font-metric-sm text-[14px] text-text-primary">1 un</span>
+<span class="block font-label-xs text-status-critical font-semibold">Sob Encomenda</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Dispatchers -->
+<div class="flex flex-col gap-space-xs pt-space-sm border-t border-border-subtle">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-xs text-text-muted uppercase">Ações do Operador • Rápido Despacho</span>
+<span class="font-label-xs text-status-normal flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">bolt</span> ERP Integrado
+            </span>
+</div>
+<button class="w-full h-10 px-space-md bg-primary hover:bg-surface-tint text-on-primary rounded-lg font-headline-sm text-[13px] flex items-center justify-center gap-space-xs shadow-sm transition-all active:scale-[0.98]" onclick="triggerFeedback('SAP ERP', this)">
+<span class="material-symbols-outlined text-[18px]">outbox</span>
+<span>Exportar Requisição SAP / ERP</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs mt-1">
+<button class="h-10 px-space-sm bg-surface-container-low hover:bg-surface-container-high text-text-primary rounded-lg font-headline-sm text-[12px] flex items-center justify-center gap-1.5 transition-all active:scale-[0.98]" onclick="triggerFeedback('Scraper Ativado', this)">
+<span class="material-symbols-outlined text-[16px] text-primary">travel_explore</span>
+<span>Disparar Cotação Web</span>
+</button>
+<button class="h-10 px-space-sm bg-surface-container-low hover:bg-surface-container-high text-text-primary rounded-lg font-headline-sm text-[12px] flex items-center justify-center gap-1.5 transition-all active:scale-[0.98]" onclick="triggerFeedback('OS Aberta #9942', this)">
+<span class="material-symbols-outlined text-[16px] text-status-normal">assignment_turned_in</span>
+<span>Abrir OS Firestore</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Strip: Audit Trail & SENAI Hackathon Protocol Context -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-text-muted text-[20px]">verified</span>
+<p class="font-body-sm text-text-secondary">
+<span class="font-semibold text-text-primary">Pipeline de Manutenção Conectada:</span>
+        Inferência validada contra histórico termográfico e curva de falha P-F (ISO 17359).
+      </p>
+</div>
+<div class="flex items-center gap-space-md text-text-muted font-body-sm">
+<span>Checksum DuckDB: <code class="text-text-primary font-mono font-semibold">0x4F92B</code></span>
+<span>•</span>
+<span>Sessão: <span class="text-text-primary">#SP-OUR-2025-04</span></span>
+</div>
+</div>
+</div>
+<script>
+  function triggerFeedback(actionName, btn) {
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">sync</span> Processando...`;
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">done</span> ${actionName} Sucesso!`;
+      btn.classList.add('bg-status-normal', 'text-white');
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+        btn.classList.remove('bg-status-normal', 'text-white');
+      }, 2000);
+    }, 600);
+  }
+</script></main></div></body></html>

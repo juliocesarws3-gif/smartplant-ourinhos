@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-primary-container":"#fdfcff","primary-container":"#007bb9","text-secondary":"#475569","surface-variant":"#dfe3e8","surface-dim":"#d7dae0","secondary":"#565e74","on-error-container":"#93000a","tertiary-container":"#ac6200","outline":"#707881","status-critical":"#DC2626","on-secondary-fixed-variant":"#3f465c","surface-tint":"#006398","tertiary":"#894d00","on-primary-fixed":"#001d31","error-container":"#ffdad6","tertiary-fixed-dim":"#ffb875","on-tertiary-fixed-variant":"#6b3b00","on-primary":"#ffffff","surface-container-high":"#e5e8ee","primary-fixed":"#cce5ff","surface-container-low":"#f1f4fa","on-surface-variant":"#3f4850","primary-fixed-dim":"#93ccff","status-alert":"#D97706","text-muted":"#64748B","surface":"#f7f9ff","surface-container-highest":"#dfe3e8","secondary-fixed-dim":"#bec6e0","secondary-container":"#dae2fd","primary":"#006194","surface-canvas":"#F8FAFC","error":"#ba1a1a","on-secondary-container":"#5c647a","inverse-on-surface":"#eef1f7","on-background":"#181c20","on-secondary-fixed":"#131b2e","on-surface":"#181c20","on-secondary":"#ffffff","on-tertiary-fixed":"#2d1600","border-muted":"#CBD5E1","tertiary-fixed":"#ffdcc0","surface-container":"#ebeef4","outline-variant":"#bfc7d2","secondary-fixed":"#dae2fd","border-subtle":"#E2E8F0","on-error":"#ffffff","surface-card":"#FFFFFF","inverse-surface":"#2d3135","on-tertiary-container":"#fffbff","background":"#f7f9ff","status-normal":"#059669","on-primary-fixed-variant":"#004b73","on-tertiary":"#ffffff","surface-bright":"#f7f9ff","text-primary":"#0F172A","inverse-primary":"#93ccff","surface-container-lowest":"#ffffff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"1rem","space-xs":"0.25rem","space-md":"1rem","space-lg":"1.5rem","margin-lg":"2rem","gutter":"1rem","space-sm":"0.5rem","gutter-lg":"1.5rem","space-xl":"2rem","margin-md":"1.5rem"},"fontFamily":{"headline-lg-mobile":["Inter"],"label-xs":["Inter"],"body-lg":["JetBrains Mono"],"headline-sm":["Inter"],"headline-lg":["Inter"],"metric-display-mobile":["JetBrains Mono"],"label-md":["Inter"],"headline-md":["Inter"],"metric-display":["JetBrains Mono"],"body-md":["JetBrains Mono"],"body-sm":["JetBrains Mono"],"metric-sm":["JetBrains Mono"]},"fontSize":{"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"700"}],"label-xs":["10px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"700"}],"metric-display-mobile":["28px",{"lineHeight":"34px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"metric-display":["36px",{"lineHeight":"40px","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"metric-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}]}}}};</script></head><body class="bg-surface-canvas font-body-md text-text-primary min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-card z-50 flex flex-col justify-between py-space-md border-r border-border-subtle shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-md"><div class="px-space-md flex flex-col gap-space-xs"><span class="font-label-xs text-text-muted uppercase tracking-wider">Unidade Operacional</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">precision_manufacturing</span><span class="font-headline-sm text-text-primary text-[15px]">Plant Control v4.2</span></div></div><div class="px-space-md"><label class="font-label-xs text-text-muted uppercase tracking-wider block mb-space-xs">Ativo Selecionado</label><div class="relative"><select class="w-full h-10 px-space-sm bg-surface-container-low font-body-sm text-text-primary rounded-lg border border-border-muted focus:outline-none focus:border-primary pr-8 appearance-none cursor-pointer"><option selected="">Torno CNC-04</option><option>Bomba Centrífuga P-102</option><option>Esteira M-01</option></select><span class="material-symbols-outlined absolute right-space-sm top-2.5 text-text-muted pointer-events-none text-[18px]">expand_more</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg transition-all bg-primary-container text-on-primary-container font-headline-sm" data-path="painel-geral-telemetria" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span>Painel &amp; Telemetria</a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="diagnostico-preditivo-ai" href="#"><span class="material-symbols-outlined text-[18px]">psychology</span>Diagnóstico AI</a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="cotacao-de-pecas" href="#"><span class="material-symbols-outlined text-[18px]">request_quote</span>Cotação de Peças</a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ordens-de-servico" href="#"><span class="material-symbols-outlined text-[18px]">assignment</span>Ordens de Serviço</a></nav></div><div class="px-space-md border-t border-border-subtle pt-space-sm flex flex-col gap-space-xs"><div class="flex items-center justify-between text-text-muted font-body-sm"><span>Shift ID</span><span class="font-label-md text-text-primary">T-01A (Manhã)</span></div><div class="flex items-center justify-between text-text-muted font-body-sm"><span>Uptime Linha</span><span class="font-label-md text-status-normal">99.4%</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 z-40 bg-surface-card/95 backdrop-blur-xl border-b border-border-subtle shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="SmartPlant Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W5BNF_cV1Zb_Jsv5dzo1B_FyelVhDDLZb6DymoLVPRlIqYtgtPqnmfxaPTpm3jhscxg4k-LdGeEO2Hud1lhNg6Ksk7tp9YhTYNdZtMSs17Ol4yHVYSEnNbkrNtUzMzcmx3UVn-_oibjWvk3oKPPdH9OG3h45vQ0sHPgOFPqQCWVHsZk9QNKtq5StLj_zmPayt-O_fg6fFNEFUO7iraFQwu7IhCzP61WrUE1KFPJHH3JY8WPl10NduH_AcD"/><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-text-primary tracking-tight">SmartPlant Ourinhos</span><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-text-secondary border border-border-muted font-label-xs">Linha 02 - Moagem &amp; Envase</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a aria-current="page" class="px-space-sm py-space-xs rounded-lg transition-colors bg-primary-container text-on-primary-container font-headline-sm" data-path="painel-geral-telemetria" href="#">Painel Geral &amp; Telemetria</a><a class="px-space-sm py-space-xs rounded-lg font-headline-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="diagnostico-preditivo-ai" href="#">Diagnóstico Preditivo AI</a><a class="px-space-sm py-space-xs rounded-lg font-headline-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="cotacao-de-pecas" href="#">Cotação de Peças</a><a class="px-space-sm py-space-xs rounded-lg font-headline-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ordens-de-servico" href="#">Ordens de Serviço (OS)</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm bg-surface-container-low px-space-sm py-1.5 rounded-lg border border-border-subtle"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-status-normal animate-pulse"></span><span class="font-label-xs text-text-secondary uppercase">IIoT Firebase</span></div><span class="text-border-muted">|</span><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-status-normal"></span><span class="font-label-xs text-text-secondary uppercase">DuckDB OLAP</span></div></div><div class="hidden sm:flex items-center gap-1.5 text-text-secondary bg-surface-container-low px-space-sm py-1.5 rounded-lg border border-border-subtle"><span class="material-symbols-outlined text-[16px] text-text-muted">schedule</span><span class="font-body-sm text-text-primary">07:42:19</span><span class="font-label-xs text-text-muted uppercase">Turno 1</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface-canvas min-h-screen"><div class="flex flex-col w-full">
+<!-- INDUSTRIAL OPERATIONAL STATUS STRIP -->
+<section class="p-space-lg flex flex-col gap-space-lg">
+<!-- SUB-BAR: LIVE SELECTION & GLOBAL SYNOPSIS -->
+<div class="bg-surface-card rounded-xl shadow-sm p-space-md flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<!-- Active Unit Select & Line Indicator -->
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<span class="material-symbols-outlined text-primary text-[24px]">precision_manufacturing</span>
+<div class="flex flex-col">
+<span class="font-label-xs text-text-muted uppercase">Máquina sob Análise</span>
+<span class="font-headline-sm text-text-primary">Bomba Centrífuga P-102 (Linha de Moagem B)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="flex h-3 w-3 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-alert opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-status-alert"></span>
+</span>
+<span class="font-label-md text-status-alert">Condição: Alerta Preditivo</span>
+<span class="font-body-sm text-text-muted">| ISO 10816 Classe III</span>
+</div>
+</div>
+<!-- Live Sampling Metadata DuckDB -->
+<div class="flex flex-wrap items-center gap-space-md bg-surface-container px-space-md py-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">data_thresholding</span>
+<div class="flex flex-col">
+<span class="font-label-xs text-text-muted uppercase">Pontos OLAP</span>
+<span class="font-body-md text-text-primary">1.200 pts (DuckDB)</span>
+</div>
+</div>
+<div class="h-6 w-px bg-surface-variant"></div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-status-normal">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-xs text-text-muted uppercase">Online</span>
+<span class="font-body-md text-text-primary">18 Unid.</span>
+</div>
+</div>
+<div class="h-6 w-px bg-surface-variant"></div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-status-alert">warning</span>
+<div class="flex flex-col">
+<span class="font-label-xs text-text-muted uppercase">Alerta</span>
+<span class="font-body-md text-status-alert font-bold">02</span>
+</div>
+</div>
+<div class="h-6 w-px bg-surface-variant"></div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-status-critical">build_circle</span>
+<div class="flex flex-col">
+<span class="font-label-xs text-text-muted uppercase">Manut. Preditiva</span>
+<span class="font-body-md text-status-critical font-bold">01</span>
+</div>
+</div>
+</div>
+</div>
+<!-- GLOBAL PLANT KPI METRICS (BENTO 4-COL) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- OEE Geral -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-text-muted uppercase">OEE Geral da Planta</span>
+<span class="p-1.5 rounded-lg bg-surface-container-low text-primary material-symbols-outlined text-[20px]">speed</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-display text-text-primary">84.6</span>
+<span class="font-headline-sm text-text-muted">%</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between">
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mr-space-sm">
+<div class="bg-primary h-full rounded-full" style="width: 84.6%"></div>
+</div>
+<span class="font-label-xs text-status-normal whitespace-nowrap">+1.8% vs Turno Ant.</span>
+</div>
+</div>
+<!-- MTBF -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-text-muted uppercase">MTBF (Tempo Médio Entre Falhas)</span>
+<span class="p-1.5 rounded-lg bg-surface-container-low text-text-secondary material-symbols-outlined text-[20px]">timelapse</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-display text-text-primary">148.0</span>
+<span class="font-headline-sm text-text-muted">horas</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between font-label-xs text-text-muted">
+<span>Meta Planta: 140h</span>
+<span class="text-status-normal font-semibold">Dentro do SLA</span>
+</div>
+</div>
+<!-- MTTR -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-text-muted uppercase">MTTR (Tempo Médio de Reparo)</span>
+<span class="p-1.5 rounded-lg bg-surface-container-low text-text-secondary material-symbols-outlined text-[20px]">timer</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-display text-text-primary">2.4</span>
+<span class="font-headline-sm text-text-muted">horas</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between font-label-xs text-text-muted">
+<span>Equipe Mecânica Turno A</span>
+<span class="text-primary font-semibold">Alvo &lt; 3.0h</span>
+</div>
+</div>
+<!-- Taxa de Disponibilidade -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-text-muted uppercase">Disponibilidade Operacional</span>
+<span class="p-1.5 rounded-lg bg-surface-container-low text-status-normal material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-display text-status-normal">92.1</span>
+<span class="font-headline-sm text-text-muted">%</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between">
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mr-space-sm">
+<div class="bg-status-normal h-full rounded-full" style="width: 92.1%"></div>
+</div>
+<span class="font-label-xs text-text-muted">Meta: 90%</span>
+</div>
+</div>
+</div>
+<!-- MAIN SCADA TELEMETRY & PREDICTIVE DIAGNOSTICS SECTION -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- 8 COLS: GAUGES & REAL-TIME SENSOR STREAM -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- GAUGES CONTAINER -->
+<div class="bg-surface-card rounded-xl shadow-sm p-space-md">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span class="font-headline-sm text-text-primary">Telemetria em Tempo Real (P-102)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-status-normal"></span>
+<span class="font-label-xs text-text-muted uppercase">Taxa de Atualização: 250ms</span>
+</div>
+</div>
+<!-- GAUGES 4-GRID -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Gauge 1: Vibração RMS (Alerta Âmbar) -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col items-center justify-between relative overflow-hidden">
+<div class="w-full flex items-center justify-between">
+<span class="font-label-xs text-text-muted uppercase">Vibração RMS</span>
+<span class="px-space-xs py-0.5 rounded text-[10px] font-bold bg-amber-100 text-status-alert">ALERTA</span>
+</div>
+<!-- SVG Radial Gauge -->
+<div class="relative w-36 h-36 my-space-xs flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<!-- Background Track -->
+<circle class="text-surface-variant fill-none" cx="50" cy="50" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-linecap="round" stroke-width="8"></circle>
+<!-- Amber Warning Arc (4.8 / 6.0 scale ~ 80%) -->
+<circle class="text-status-alert fill-none" cx="50" cy="50" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="100.48" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-metric-sm text-text-primary font-bold">4.8</span>
+<span class="font-label-xs text-text-muted">mm/s</span>
+</div>
+</div>
+<div class="w-full flex justify-between font-label-xs text-text-muted mt-space-xs">
+<span>0.0</span>
+<span class="text-status-critical font-semibold">Teto: 6.0</span>
+</div>
+</div>
+<!-- Gauge 2: Temp Mancal (Crítica Vermelho) -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col items-center justify-between relative overflow-hidden">
+<div class="w-full flex items-center justify-between">
+<span class="font-label-xs text-text-muted uppercase">Temp. Mancal</span>
+<span class="px-space-xs py-0.5 rounded text-[10px] font-bold bg-red-100 text-status-critical">CRÍTICO</span>
+</div>
+<!-- SVG Radial Gauge -->
+<div class="relative w-36 h-36 my-space-xs flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<!-- Background Track -->
+<circle class="text-surface-variant fill-none" cx="50" cy="50" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-linecap="round" stroke-width="8"></circle>
+<!-- Red Critical Arc (78.4 / 85.0 max ~ 92%) -->
+<circle class="text-status-critical fill-none" cx="50" cy="50" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="78.0" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-metric-sm text-status-critical font-bold">78.4</span>
+<span class="font-label-xs text-text-muted">°C</span>
+</div>
+</div>
+<div class="w-full flex justify-between font-label-xs text-text-muted mt-space-xs">
+<span>20°C</span>
+<span class="text-status-critical font-semibold">Máx: 85°C</span>
+</div>
+</div>
+<!-- Gauge 3: OEE Operacional (Verde) -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col items-center justify-between relative overflow-hidden">
+<div class="w-full flex items-center justify-between">
+<span class="font-label-xs text-text-muted uppercase">OEE da Máquina</span>
+<span class="px-space-xs py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-status-normal">NORMAL</span>
+</div>
+<!-- SVG Radial Gauge -->
+<div class="relative w-36 h-36 my-space-xs flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<circle class="text-surface-variant fill-none" cx="50" cy="50" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-linecap="round" stroke-width="8"></circle>
+<!-- Green Arc (88.5%) -->
+<circle class="text-status-normal fill-none" cx="50" cy="50" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="84.4" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-metric-sm text-text-primary font-bold">88.5</span>
+<span class="font-label-xs text-text-muted">%</span>
+</div>
+</div>
+<div class="w-full flex justify-between font-label-xs text-text-muted mt-space-xs">
+<span>0%</span>
+<span class="text-status-normal font-semibold">100%</span>
+</div>
+</div>
+<!-- Gauge 4: Pressão Hidráulica (Nominal Verde) -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col items-center justify-between relative overflow-hidden">
+<div class="w-full flex items-center justify-between">
+<span class="font-label-xs text-text-muted uppercase">Pressão Linha</span>
+<span class="px-space-xs py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-status-normal">NOMINAL</span>
+</div>
+<!-- SVG Radial Gauge -->
+<div class="relative w-36 h-36 my-space-xs flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<circle class="text-surface-variant fill-none" cx="50" cy="50" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-linecap="round" stroke-width="8"></circle>
+<!-- Green Arc (6.2 / 10 bar ~ 62%) -->
+<circle class="text-primary fill-none" cx="50" cy="50" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="135.0" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-metric-sm text-text-primary font-bold">6.2</span>
+<span class="font-label-xs text-text-muted">bar</span>
+</div>
+</div>
+<div class="w-full flex justify-between font-label-xs text-text-muted mt-space-xs">
+<span>0 bar</span>
+<span class="text-text-muted font-semibold">10 bar</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 24-HOUR INTERACTIVE VIBRATION SPARKLINE / SCATTER PLOT -->
+<div class="bg-surface-card rounded-xl shadow-sm p-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-sm">
+<div>
+<span class="font-headline-sm text-text-primary">Tendência Histórica de Vibração (Últimas 24h)</span>
+<p class="font-body-sm text-text-secondary">Amostragem RMS por acelerômetro triaxial piezoelétrico P-102-S01</p>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 font-label-xs text-text-muted">
+<span class="w-3 h-0.5 bg-status-alert"></span>
+<span>Vibração Medida</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-xs text-status-critical">
+<span class="w-3 h-0.5 border-t border-dashed border-status-critical"></span>
+<span>Threshold Crítico ISO 10816 (4.5 mm/s)</span>
+</div>
+</div>
+</div>
+<!-- Inline Technical SVG Chart with Grid & Scatter Points -->
+<div class="w-full h-48 bg-surface-container-lowest rounded-lg p-space-xs flex flex-col justify-end">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 800 160">
+<!-- Y-Axis Gridlines -->
+<line class="text-surface-variant" stroke="currentColor" stroke-width="1" x1="0" x2="800" y1="20" y2="20"></line>
+<line class="text-surface-variant" stroke="currentColor" stroke-width="1" x1="0" x2="800" y1="60" y2="60"></line>
+<line class="text-surface-variant" stroke="currentColor" stroke-width="1" x1="0" x2="800" y1="100" y2="100"></line>
+<line class="text-surface-variant" stroke="currentColor" stroke-width="1" x1="0" x2="800" y1="140" y2="140"></line>
+<!-- ISO 10816 Critical Limit Dashed Line (Threshold at 4.5 mm/s -> Y=48) -->
+<line stroke="#DC2626" stroke-dasharray="6,4" stroke-width="2" x1="0" x2="800" y1="48" y2="48"></line>
+<text fill="#DC2626" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="790" y="44">ISO CRÍTICO 4.5 mm/s</text>
+<!-- Safe Zone Fill -->
+<path d="M 0 160 L 0 135 L 70 130 L 140 128 L 210 120 L 280 115 L 350 110 L 420 95 L 490 85 L 560 68 L 630 52 L 700 42 L 770 35 L 800 32 L 800 160 Z" fill="#D97706" fill-opacity="0.08"></path>
+<!-- Telemetry Curve -->
+<path d="M 0 135 Q 70 130 140 128 T 280 115 T 420 95 T 560 68 T 700 42 T 800 32" fill="none" stroke="#D97706" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Scatter Incident Dots -->
+<circle cx="140" cy="128" fill="#D97706" r="3"></circle>
+<circle cx="280" cy="115" fill="#D97706" r="3"></circle>
+<circle cx="420" cy="95" fill="#D97706" r="3"></circle>
+<circle cx="560" cy="68" fill="#DC2626" r="3.5"></circle>
+<circle class="animate-pulse" cx="700" cy="42" fill="#DC2626" r="4.5"></circle>
+<circle cx="800" cy="32" fill="#DC2626" r="5"></circle>
+</svg>
+</div>
+<div class="flex justify-between font-label-xs text-text-muted mt-space-xs">
+<span>Ontem 08:00</span>
+<span>14:00</span>
+<span>20:00</span>
+<span>Hoje 02:00</span>
+<span class="text-status-critical font-bold">Agora (4.8 mm/s)</span>
+</div>
+</div>
+</div>
+<!-- 4 COLS: GEMINI AI PREDICTIVE DIAGNOSIS MODULE -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- AI CARD -->
+<div class="bg-surface-card rounded-xl shadow-sm p-space-md flex flex-col justify-between h-full border-l-4 border-l-primary">
+<div class="flex flex-col gap-space-md">
+<!-- Header Tag -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">psychology</span>
+<span class="font-headline-sm text-text-primary">Diagnóstico Gemini AI</span>
+</div>
+<span class="bg-primary/10 text-primary px-space-xs py-0.5 rounded font-label-xs uppercase tracking-wider">v2.5 Flash</span>
+</div>
+<!-- Severity Badge -->
+<div class="bg-red-50 p-space-sm rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-status-critical text-[20px] mt-0.5">warning</span>
+<div class="flex flex-col">
+<span class="font-label-md text-status-critical uppercase">Risco Iminente de Quebra de Eixo</span>
+<span class="font-body-sm text-text-secondary">Confiança da Inferência: 98.4% (DuckDB Spectral Model)</span>
+</div>
+</div>
+<!-- Core AI Finding Text -->
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<p class="font-body-md text-text-primary leading-relaxed">
+                "Elevação contínua na harmônica de 2ª ordem de vibração combinada com pico térmico de <strong class="text-status-critical">78.4°C</strong> no mancal traseiro indica falha iminente por <span class="underline decoration-status-alert">desalinhamento angular</span> e desgaste severo da pista de esferas."
+              </p>
+</div>
+<!-- Critical Part Identification -->
+<div class="p-space-sm bg-surface-container rounded-lg flex flex-col gap-space-xs">
+<span class="font-label-xs text-text-muted uppercase">Componente Crítico Identificado</span>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-text-primary text-[15px] block">Rolamento de Esferas SKF 6208-2RS1</span>
+<span class="font-label-md text-text-muted">PN: SKF-6208 · Eixo Ø40mm</span>
+</div>
+<span class="material-symbols-outlined text-text-secondary text-[28px]">settings_input_component</span>
+</div>
+</div>
+<!-- Recommended Actions Checklist -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-xs text-text-muted uppercase">Prescrição Recomendada</span>
+<div class="flex items-center gap-space-xs text-text-secondary font-body-sm">
+<span class="material-symbols-outlined text-status-normal text-[18px]">check_circle</span>
+<span>Interrupção preventiva no fim do Turno 1</span>
+</div>
+<div class="flex items-center gap-space-xs text-text-secondary font-body-sm">
+<span class="material-symbols-outlined text-status-normal text-[18px]">check_circle</span>
+<span>Substituição do rolamento traseiro (P-102-M)</span>
+</div>
+<div class="flex items-center gap-space-xs text-text-secondary font-body-sm">
+<span class="material-symbols-outlined text-status-normal text-[18px]">check_circle</span>
+<span>Checagem de alinhamento laser de acoplamento</span>
+</div>
+</div>
+</div>
+<!-- Direct CTA Buttons -->
+<div class="flex flex-col gap-space-sm mt-space-md pt-space-md border-t border-border-subtle">
+<button class="w-full h-11 bg-primary text-on-primary rounded-lg font-headline-sm text-[14px] flex items-center justify-center gap-space-xs hover:bg-surface-tint transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add_task</span>
+              Gerar Ordem de Serviço Imediata
+            </button>
+<button class="w-full h-10 bg-surface-container text-text-primary rounded-lg font-headline-sm text-[13px] flex items-center justify-center gap-space-xs hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[18px]">request_quote</span>
+              Visualizar Cotação de Peças
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- MODULE 4: COMPACT PREVIEW OF SCRAPER & WORK ORDERS (DUAL PANEL) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- 7 COLS: SCRAPED PARTS MARKETPLACE PREVIEW -->
+<div class="lg:col-span-7 bg-surface-card rounded-xl shadow-sm p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">manage_search</span>
+<span class="font-headline-sm text-text-primary">Radar de Cotações em Fornecedores (Scraper)</span>
+</div>
+<span class="font-label-xs text-text-muted">Part: SKF-6208</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-text-muted font-label-xs uppercase">
+<th class="py-space-xs px-space-sm rounded-l">Fornecedor</th>
+<th class="py-space-xs px-space-sm">Disponibilidade</th>
+<th class="py-space-xs px-space-sm">Prazo</th>
+<th class="py-space-xs px-space-sm text-right">Preço Unit.</th>
+<th class="py-space-xs px-space-sm rounded-r text-center">Ação</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-body-sm text-text-primary">
+<!-- Row 1 (Melhor Escolha) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-sm font-semibold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-status-normal text-[16px]">verified</span>
+                  Distribuidora Rolamax SP
+                </td>
+<td class="py-space-sm px-space-sm">
+<span class="px-2 py-0.5 rounded-full text-[11px] bg-emerald-50 text-status-normal font-semibold">12 un em estoque</span>
+</td>
+<td class="py-space-sm px-space-sm">24h (Sedex 10)</td>
+<td class="py-space-sm px-space-sm text-right font-bold text-text-primary">R$ 148,90</td>
+<td class="py-space-sm px-space-sm text-center">
+<button class="px-space-sm py-1 bg-primary text-on-primary rounded text-[11px] font-semibold hover:bg-surface-tint">Pedir</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-text-muted text-[16px]">storefront</span>
+                  Apolo Suprimentos Industriais
+                </td>
+<td class="py-space-sm px-space-sm">
+<span class="px-2 py-0.5 rounded-full text-[11px] bg-emerald-50 text-status-normal font-semibold">04 un</span>
+</td>
+<td class="py-space-sm px-space-sm">48h (Transportadora)</td>
+<td class="py-space-sm px-space-sm text-right font-bold text-text-primary">R$ 162,00</td>
+<td class="py-space-sm px-space-sm text-center">
+<button class="px-space-sm py-1 bg-surface-container text-text-primary rounded text-[11px] font-semibold hover:bg-surface-container-high">Cotar</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-text-muted text-[16px]">storefront</span>
+                  SKF Loja Oficial Brasil
+                </td>
+<td class="py-space-sm px-space-sm">
+<span class="px-2 py-0.5 rounded-full text-[11px] bg-surface-container text-text-muted">Sob Encomenda</span>
+</td>
+<td class="py-space-sm px-space-sm">5 dias úteis</td>
+<td class="py-space-sm px-space-sm text-right font-bold text-text-primary">R$ 179,50</td>
+<td class="py-space-sm px-space-sm text-center">
+<button class="px-space-sm py-1 bg-surface-container text-text-muted rounded text-[11px] font-semibold cursor-not-allowed">Cotar</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- 5 COLS: ACTIVE WORK ORDERS SYNC (FIREBASE FIRESTORE) -->
+<div class="lg:col-span-5 bg-surface-card rounded-xl shadow-sm p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-status-alert text-[20px]">assignment</span>
+<span class="font-headline-sm text-text-primary">Ordens de Serviço em Aberto</span>
+</div>
+<span class="font-label-xs text-text-muted uppercase">Firebase Firestore Live</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- OS Item 1: Recente P-102 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-status-alert"></span>
+<div>
+<span class="font-headline-sm text-[13px] text-text-primary block">OS-2024-0891 · Bomba P-102</span>
+<span class="font-body-sm text-text-secondary">Substituição do Mancal SKF</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-xs text-status-alert font-bold block uppercase">Agendada (18:00)</span>
+<span class="font-body-sm text-text-muted">Mec. Roberto V.</span>
+</div>
+</div>
+<!-- OS Item 2: Torno CNC -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-status-normal"></span>
+<div>
+<span class="font-headline-sm text-[13px] text-text-primary block">OS-2024-0888 · Torno CNC-04</span>
+<span class="font-body-sm text-text-secondary">Lubrificação e troca de barramento</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-xs text-status-normal font-bold block uppercase">Concluída</span>
+<span class="font-body-sm text-text-muted">Mec. Lucas T.</span>
+</div>
+</div>
+<!-- OS Item 3: Esteira -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<div>
+<span class="font-headline-sm text-[13px] text-text-primary block">OS-2024-0882 · Esteira M-01</span>
+<span class="font-body-sm text-text-secondary">Tensionamento de correia de arraste</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-xs text-primary font-bold block uppercase">Em Andamento</span>
+<span class="font-body-sm text-text-muted">Mec. Fernando D.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex justify-between items-center text-text-muted font-label-xs">
+<span>Sincronizado via Firestore Realtime</span>
+<a class="text-primary hover:underline font-semibold flex items-center gap-0.5" href="#">
+            Abrir Central de OS <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div></main></div></body></html>

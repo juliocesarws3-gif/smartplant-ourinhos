@@ -1,0 +1,42 @@
+---
+
+# 2. Guia de UI/UX e Design System: `design.md`
+
+```markdown
+# Guia de UI/UX e Design System: SmartPlant Ourinhos
+
+> **Documento:** Especificação Visual, Design System e Arquitetura de Interface (SDD)  
+> **Perfil:** Padrão Indústria 4.0 - Clean Data Intelligence & Responsive Mobile-First  
+> **Versão:** 1.0
+
+---
+
+## 1. Filosofia Visual e Diretrizes Gerais
+
+O **SmartPlant Ourinhos** foi concebido para uso no chão de fábrica e em salas de controle. A interface prioriza o diagnóstico rápido de anomalias, eliminando fricções visuais.
+
+* **Conceito:** *Industrial Clean Ops* (inspirado em painéis de controle SCADA modernos, combinando sobriedade corporativa com alertas semânticos de alta nitidez).
+* **Tema:** Light Mode Industrial Moderno (fundos em cinza claro estruturado `#F1F5F9`, tipografia de alto contraste em `#0F172A`, e destaque tático em verde esmeralda, amarelo alerta e vermelho crítico).
+* **Abordagem:** **Mobile-First** para técnicos de manutenção em campo e visualização expandida em monitores da gerência.
+
+---
+
+## 2. Paleta de Cores e Design Tokens
+
+* **Background Global:** `#F8FAFC` (`slate-50`).
+* **Cards e Módulos:** `#FFFFFF` (`white`) com borda sutil `#E2E8F0` (`slate-200`).
+* **Cor Primária / Ações:** `#0284C7` (`sky-600`) — transmite confiabilidade tecnológica industrial.
+* **Indicadores Semânticos de Saúde do Maquinário:**
+  * **Normal (Saudável):** `#059669` (`emerald-600`).
+  * **Alerta (Atenção):** `#D97706` (`amber-600`).
+  * **Crítico (Risco de Quebra):** `#DC2626` (`red-600`).
+
+---
+
+## 3. Anatomia da Interface Única (5 Módulos Principais)
+
+1. **Header Industrial:** Status geral da fábrica, conexão com o Firebase e relógio em tempo real.
+2. **Gauge Dashboards Dinâmicos:** Medidores circulares em SVG para Vibração e Temperatura com zonas de alerta coloridas em tempo real.
+3. **Painel de Diagnóstico & Lista de Compras (Gemini AI):** Caixa de síntese inteligente indicando qual peça vai falhar e o checklist de aquisição.
+4. **Scraper de Cotação de Peças:** Tabela viva exibindo o componente, fornecedor web, preço atual e variação.
+5. **Ordens de Serviço Reativas (Firebase):** Listagem em tempo real de OS abertas, em andamento e concluídas, com atualização instantânea via Firestore.

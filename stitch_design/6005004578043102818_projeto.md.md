@@ -1,0 +1,84 @@
+# Especificação Técnica do Sistema (SDD): SmartPlant Ourinhos
+
+> **Documento:** Diretiva de Engenharia e Arquitetura de Software  
+> **Classificação:** Camada 1 (Estratégia & Especificação Canônica)  
+> **Perfil:** Padrão Indústria 4.0 - Monitoramento Preditivo e Manutenção Baseada em Condição (PdM)  
+> **Versão:** 2.0 (Consolidada com Dicionário de Dados PDF, Scraper de Peças, Ingestão de Telemetria e Firestore)
+
+---
+
+## 1. Visão Geral e Propósito
+
+O **SmartPlant Ourinhos** é uma plataforma industrial inteligente desenvolvida para monitorar a saúde de máquinas e equipamentos fabris em tempo real, evitando paradas não planejadas (surpresas de quebra de linha de produção). 
+
+O sistema combina:
+1. **Engenharia de Dados Preditivos:** Ingestão de histórico em lote de sensores IIoT (temperatura, vibração RMS, pressão, corrente elétrica e ruído) via DuckDB/Polars a partir do arquivo CSV base (`data/data_smartplant_manutencao_2.csv`), mapeado pelo documento em PDF **"Guia Técnico e Dicionário de Dados - Hackathon SENAI Antigravity.pdf"**.
+2. **Scraping Vivo de Cotação de Peças:** Agente web que pesquisa em tempo real na internet o preço atual e disponibilidade de componentes de reposição industriais usando o `codigo_peca_reposicao` / part number.
+3. **Diagnóstico Automatizado via Gemini AI:** Integração com IA para cruzar o histórico de anomalias com os campos textuais ricos da base (`diagnostico_preditivo_ia`, `componente_critico`), gerando relatórios de manutenção preditiva e a lista de compras otimizada.
+4. **Dashboards de Alta Performance:** Gauge charts dinâmicos e Scatter Plots (Plotly.js/SVG) monitorando vibrações RMS, temperatura, OEE, MTBF e MTTR das máquinas.
+5. **Gestão de Ordens de Serviço (OS):** Módulo reativo sincronizado em tempo real via Firebase Firestore para controle de OS e atualização do `status_operacional` das máquinas.
+
+* **Motor de Desenvolvimento:** Google Antigravity + Gemini 3.8 Flash High
+* **Princípios de Engenharia:** Clean Code, SOLID, Mobile-First, Spec-Driven Development (SDD), Zero-Hallucination em métricas de falha.
+
+---
+
+## 2. Arquitetura e Stack Tecnológica
+
+### 2.1. Backend (API, Dados, Scraping & IA)
+* **Linguagem & Framework:** Python 3.10+ com **FastAPI** assíncrono e **Uvicorn**.
+* **Motor OLAP Massivo:** **DuckDB / Polars** para processamento analítico da base de telemetria IIoT (`data/data_smartplant_manutencao_2.csv`, contendo 1.200 linhas e 25 atributos).
+* **Base de Conhecimento RAG:** Extração e indexação das definições do arquivo PDF **"Guia Técnico e Dicionário de Dados"** para suporte a agentes inteligentes.
+* **Scraper de Preços:** `httpx` assíncrono + `BeautifulSoup4` para varredura de fornecedores industriais na web utilizando o código/part number da peça.
+* **Orquestração de Diagnóstico:** SDK do Google Gemini para processamento dos campos `diagnostico_preditivo_ia` e `protocolo_sugerido_ia`, gerando a lista de compras e relatórios de intervenção.
+* **Banco de Dados Operacional:** **Firebase Firestore** para sincronização em tempo real do status das máquinas e Ordens de Serviço (OS).
+
+### 2.2. Frontend (Single-Page Workspace)
+* **Framework:** **React 19** com **Vite** e **TypeScript**.
+* **Estilização:** **Tailwind CSS v4** (tema Light Mode moderno, clean data intelligence industrial).
+* **Visualização:** Gauge charts dinâmicos (OEE, Vibração, Temperatura) e gráficos interativos Scatter/Curva de Risco.
+* **Comunicação:** Fetch assíncrono com atualizações reativas via SDK Web do Firebase.
+
+---
+
+## 3. Estrutura de Diretórios do Projeto
+
+```text
+smartplant-ourinhos/
+├── data/
+│   ├── data_smartplant_manutencao_2.csv              # CSV base de telemetria (1.200 linhas x 25 colunas)
+│   ├── Guia Técnico e Dicionário de Dados - Hackathon SENAI Antigravity.pdf # Dicionário de dados oficial em PDF
+│   └── processed/
+│       └── smartplant.duckdb                         # Banco analítico DuckDB indexado por máquina/linha
+├── backend/
+│   ├── app/
+│   │   ├── core/                   # Configuração e conexão com DuckDB e Firebase
+│   │   ├── routers/
+│   │   │   ├── sensors.py          # Endpoints de telemetria (Vibração RMS, Temp, OEE, MTBF/MTTR)
+│   │   │   ├── scraper.py          # Agente de cotação de peças usando codigo_peca_reposicao
+│   │   │   ├── diagnosis.py        # Diagnósticos preditivos via Gemini AI baseados na RAG do PDF
+│   │   │   └── os_firebase.py      # Gestão de Ordens de Serviço reativas via Firestore
+│   │   ├── services/
+│   │   │   ├── pdf_rag_reader.py   # Leitor do "Guia Técnico e Dicionário de Dados" (PDF)
+│   │   │   ├── web_scraper.py      # Lógica de extração de preços por part number
+│   │   │   └── ai_diagnostician.py # Prompt engineering focado em manutenção preditiva
+│   │   ├── schemas.py              # Contratos Pydantic
+│   │   └── main.py                 # Ponto de entrada FastAPI
+│   ├── tests/
+│   │   └── test_backend.py         # Testes automatizados (pytest)
+│   └── requirements.txt
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Header.tsx          # Status da planta e telemetria geral
+│   │   │   ├── GaugeDashboard.tsx  # Gauge charts dinâmicos de OEE, Vibração e Temperatura
+│   │   │   ├── DiagnosisCard.tsx   # Painel Gemini AI com diagnóstico preditivo e lista de compras
+│   │   │   ├── PriceScraperView.tsx# Tabela de cotação viva de peças na web por part number
+│   │   │   └── ServiceOrders.tsx   # Lista de Ordens de Serviço em tempo real (Firebase)
+│   │   ├── services/api.ts         # Comunicação com FastAPI
+│   │   ├── App.tsx                 # Single-Page Workspace industrial
+│   │   └── index.css               # Design tokens Tailwind v4
+│   └── vite.config.ts
+├── executar.bat                    # Inicializador turnkey em 1 clique
+├── encerrar.bat                    # Finalizador de processos
+└── README.md                       # Documentação do projeto

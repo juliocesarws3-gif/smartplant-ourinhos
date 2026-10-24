@@ -1,0 +1,80 @@
+[
+  {
+    "id": "OS-2026-087",
+    "maquina_id": "EQP-0147",
+    "titulo": "Teste Automatizado de OS",
+    "descricao": "Verificação de pipeline de teste",
+    "componente_critico": "Sensor de Pressão",
+    "prioridade": "Alta",
+    "status": "EM_ANDAMENTO",
+    "tecnico_responsavel": "Tester Pytest",
+    "data_abertura": "2026-10-24 11:46",
+    "data_previsao": "2026-10-24 11:46",
+    "custo_estimado": 150.0
+  },
+  {
+    "id": "OS-2026-086",
+    "maquina_id": "EQP-0147",
+    "titulo": "Teste Automatizado de OS",
+    "descricao": "Verificação de pipeline de teste",
+    "componente_critico": "Sensor de Pressão",
+    "prioridade": "Alta",
+    "status": "EM_ANDAMENTO",
+    "tecnico_responsavel": "Tester Pytest",
+    "data_abertura": "2026-10-24 11:45",
+    "data_previsao": "2026-10-24 11:45",
+    "custo_estimado": 150.0
+  },
+  {
+    "id": "OS-2026-085",
+    "maquina_id": "EQP-0147",
+    "titulo": "Teste Automatizado de OS",
+    "descricao": "Verificação de pipeline de teste",
+    "componente_critico": "Sensor de Pressão",
+    "prioridade": "Alta",
+    "status": "EM_ANDAMENTO",
+    "tecnico_responsavel": "Tester Pytest",
+    "data_abertura": "2026-10-24 11:44",
+    "data_previsao": "2026-10-24 11:44",
+    "custo_estimado": 150.0
+  },
+  {
+    "id": "OS-2026-081",
+    "maquina_id": "EQP-0413",
+    "titulo": "Substituição de Rolamento Eixo Principal",
+    "descricao": "Detectado pico de vibração RMS (7.2 mm/s) e risco térmico. Parada planejada de 2h.",
+    "componente_critico": "Rolamento SKF-6208-2Z",
+    "prioridade": "Crítica",
+    "status": "EM_ANDAMENTO",
+    "tecnico_responsavel": "Carlos Mendonça (Eletromecânica SENAI)",
+    "data_abertura": "2026-10-24 07:15",
+    "data_previsao": "2026-10-24 14:00",
+    "custo_estimado": 195.5
+  },
+  {
+    "id": "OS-2026-080",
+    "maquina_id": "EQP-0372",
+    "titulo": "Calibração e Limpeza de Lentes Ópticas",
+    "descricao": "Inspeção de rotina e alinhamento de sensores infravermelhos na Linha de Rotulagem.",
+    "componente_critico": "Sensor Óptico Siemens",
+    "prioridade": "Média",
+    "status": "ABERTA",
+    "tecnico_responsavel": "Mariana Souza (Automação)",
+    "data_abertura": "2026-10-24 08:30",
+    "data_previsao": "2026-10-25 10:00",
+    "custo_estimado": 450.0
+  },
+  {
+    "id": "OS-2026-079",
+    "maquina_id": "EQP-0215",
+    "titulo": "Revisão Preventiva de Servomotor ABB",
+    "descricao": "Troca de selos mecânicos e reaperto de barramentos no Paletizador.",
+    "componente_critico": "Selo Mecânico Duplo",
+    "prioridade": "Baixa",
+    "status": "CONCLUIDA",
+    "tecnico_responsavel": "Roberto Silva",
+    "data_abertura": "2026-10-23 11:00",
+    "data_previsao": "2026-10-23 16:30",
+    "custo_estimado": 310.0
+  }
+]
